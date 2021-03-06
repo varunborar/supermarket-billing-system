@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="form" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assets.registerFormController">
+   <children>
+      <Label layoutX="16.0" layoutY="37.0" prefHeight="25.0" prefWidth="102.0" text="Comapny Name" />
+      <Label layoutX="16.0" layoutY="70.0" prefHeight="25.0" prefWidth="102.0" text="GST In." />
+      <Label layoutX="300.0" layoutY="37.0" prefHeight="25.0" prefWidth="118.0" text="Authorized Signatory" />
+      <Label layoutX="300.0" layoutY="70.0" prefHeight="25.0" prefWidth="102.0" text="Phone No." />
+      <Label layoutX="16.0" layoutY="104.0" prefHeight="25.0" prefWidth="102.0" text="Email" />
+      <Label layoutX="16.0" layoutY="143.0" prefHeight="25.0" prefWidth="102.0" text="Address Line 1" />
+      <Label layoutX="16.0" layoutY="180.0" prefHeight="25.0" prefWidth="102.0" text="Adderss Line 2" />
+      <Label layoutX="16.0" layoutY="221.0" prefHeight="25.0" prefWidth="27.0" text="City" />
+      <Label layoutX="204.0" layoutY="221.0" prefHeight="25.0" prefWidth="35.0" text="State" />
+      <Label layoutX="384.0" layoutY="221.0" prefHeight="25.0" prefWidth="35.0" text="ZIP" />
+      <Button layoutX="402.0" layoutY="280.0" mnemonicParsing="false" onAction="#register" prefHeight="25.0" prefWidth="72.0" text="Register" />
+      <Button layoutX="495.0" layoutY="280.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="72.0" text="Cancel" />
+      <TextField layoutX="118.0" layoutY="37.0" />
+      <TextField layoutX="118.0" layoutY="70.0" />
+      <TextField layoutX="420.0" layoutY="37.0" />
+      <TextField layoutX="420.0" layoutY="70.0" />
+      <TextField layoutX="118.0" layoutY="104.0" prefHeight="25.0" prefWidth="450.0" />
+      <TextField layoutX="118.0" layoutY="143.0" prefHeight="25.0" prefWidth="450.0" />
+      <TextField layoutX="118.0" layoutY="180.0" prefHeight="25.0" prefWidth="450.0" />
+      <TextField layoutX="55.0" layoutY="221.0" prefHeight="25.0" prefWidth="129.0" />
+      <TextField layoutX="239.0" layoutY="221.0" prefHeight="25.0" prefWidth="129.0" />
+      <TextField layoutX="420.0" layoutY="221.0" prefHeight="25.0" prefWidth="129.0" />
+   </children>
+</AnchorPane>
