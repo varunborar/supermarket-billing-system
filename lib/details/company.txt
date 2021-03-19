@@ -1,0 +1,15 @@
+Data members:
+Company Name
+GST Number
+Authorized Signatory
+Phone Number
+Email
+Address Line 1
+Address Line 2
+City
+State 
+Zip
+
+
+Member Functions
+getter() and setter() for each data member

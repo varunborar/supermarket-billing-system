@@ -1,0 +1,8 @@
+Data members:
+Customer Name
+Phone Number
+Email ID
+Payment Mode
+
+Member Functions:
+getter() and setter() for each data member

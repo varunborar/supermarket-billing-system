@@ -1,0 +1,9 @@
+Data member:
+Item Code
+Item Name
+Item Price
+
+
+Member Functions:
+getter() and setter() for each data member
+function to add iem to data base and get all items from data base

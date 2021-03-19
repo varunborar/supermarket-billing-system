@@ -1,5 +1,5 @@
 package main;
 
-public class company {
+public class Company {
     
 }
