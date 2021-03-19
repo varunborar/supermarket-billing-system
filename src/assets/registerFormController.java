@@ -6,7 +6,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-import main.Company;
+
 
 public class registerFormController {
     @FXML private AnchorPane form;
