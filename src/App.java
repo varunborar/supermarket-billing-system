@@ -20,7 +20,7 @@ public class App extends Application {
             scene.getStylesheets().add(getClass().getResource("App.css").toExternalForm());      //Applying Style Sheets
             mainStage.setTitle("Billing System");
             mainStage.setScene(scene);
-            mainStage.setMaximized(true);       //Opting for full screen mode 
+            // mainStage.setMaximized(true);       //Opting for full screen mode 
             mainStage.setResizable(false);      //Disabling resizing of window
             mainStage.show();
 

@@ -24,6 +24,24 @@ public class mainController {
     }
 
     // Inventory
+    public void addItemForm(ActionEvent event)
+    {
+        try{
+            
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("addItemForm.fxml"));
+            Stage secondaryStage = new Stage();
+            Scene scene = new Scene(root);
+            secondaryStage.setScene(scene);
+            secondaryStage.setTitle("Company Details");
+            secondaryStage.setResizable(false);
+            secondaryStage.show();
+            
+        }catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+    
     public void registerForm(ActionEvent event)
     {
         try{
@@ -32,6 +50,7 @@ public class mainController {
             Stage secondaryStage = new Stage();
             Scene scene = new Scene(root);
             secondaryStage.setScene(scene);
+            secondaryStage.setTitle("Add Item");
             secondaryStage.setResizable(false);
             secondaryStage.show();
 

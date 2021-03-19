@@ -1,6 +1,7 @@
 package main;
 
-import java.io.PrintWriter;
+import java.sql.*;
+import java.sql.DriverManager;
 
 public class Company {
     private String companyName;
@@ -14,4 +15,33 @@ public class Company {
     private String state;
     private String zip;
 
+    // Sql connection
+    Connection db;
+
+    public Company()
+    {
+        db = CompanyDB.connectCompany();
+        if (db == null)
+        {
+            System.exit(0);
+        }
+    }
+
+}
+
+class CompanyDB{
+
+    public static Connection connectCompany() {
+        try{
+            Class.forName("org.slite.JDBC");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:system.db");
+            return con;
+        }
+        catch(Exception e)
+        {
+            e.getMessage();
+            return null;
+        }
+        
+    }
 }
