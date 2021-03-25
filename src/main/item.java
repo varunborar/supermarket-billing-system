@@ -1,5 +1,6 @@
 package main;
 
+
 public class Item {
 
     private String ItemCode;
@@ -9,7 +10,7 @@ public class Item {
     public Item() {
         this.ItemCode = "Default Code";
         this.ItemName = "Default Name";
-        this.Price = "Default";
+        this.Price = "Default Price";
     }
 
     public void setItemcode(String newCode) {
@@ -37,3 +38,5 @@ public class Item {
     }
 
 }
+
+

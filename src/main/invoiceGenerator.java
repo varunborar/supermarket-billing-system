@@ -26,6 +26,12 @@ public class InvoiceGenerator {
     
     private String InvoiceNumber;
 
+    private static int count;
+
+    static{
+        count = 0;
+    }
+
 
     public InvoiceGenerator(String invoicePath,Company comp, Customer cust, String InvoiceNumber) {
         try {
@@ -102,10 +108,10 @@ public class InvoiceGenerator {
         customer.setMargin(30f);
         customer.setPadding(14f);
 
-        String cName = "Name: \t" + "Replace By Customer name";
-        String cPhone = "Phone No: \t " + "Replace By Customer number";
-        String cEmail = "Email: \t" + "Replace By Customer email";
-        String cMethod = "Method:   \t" + "Replace By Customer method";
+        String cName = "Name: \t" + cust.getname();
+        String cPhone = "Phone No: \t " + cust.getContact();
+        String cEmail = "Email: \t" + cust.getmail();
+        String cMethod = "Method:   \t" + cust.getpaymod();
         
         Cell cNameCell = new Cell();
         cNameCell.add(new Paragraph(cName).setFontSize(10f).setTextAlignment(TextAlignment.LEFT));
@@ -130,7 +136,7 @@ public class InvoiceGenerator {
         invoice.add(customer);
     }
 
-    public void addItem(Item i)
+    public void addItem(Item i, Integer quantity)
     {
         if (!this.itemAdded)
         {
@@ -147,6 +153,12 @@ public class InvoiceGenerator {
         }
 
         //Add for adding item row after creatng item class.
+        count++;
+        itemTable.addCell(new Cell().add(new Paragraph(count + ".").setFontSize(10f).setTextAlignment(TextAlignment.RIGHT)));
+        itemTable.addCell(new Cell().add(new Paragraph(i.getItemcode()).setFontSize(10f).setTextAlignment(TextAlignment.RIGHT)));
+        itemTable.addCell(new Cell().add(new Paragraph(i.getItemname()).setFontSize(10f).setTextAlignment(TextAlignment.RIGHT)));
+        itemTable.addCell(new Cell().add(new Paragraph(quantity + "").setFontSize(10f).setTextAlignment(TextAlignment.RIGHT)));
+        itemTable.addCell(new Cell().add(new Paragraph(i.getItemprice()).setFontSize(10f).setTextAlignment(TextAlignment.RIGHT)));
     }
 
     public void printItemTable()
@@ -186,7 +198,7 @@ public class InvoiceGenerator {
     public static void main(String[] args) {
         InvoiceGenerator inv = new InvoiceGenerator("C:/users/varun/invoice.pdf", new Company(), new Customer(), new String("0001"));
         inv.setUpFile();
-        inv.addItem(new Item());
+        inv.addItem(new Item(), 10);
         inv.printItemTable();
         inv.setFooter("replace","replace","replace");
     }

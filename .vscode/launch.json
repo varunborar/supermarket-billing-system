@@ -6,10 +6,10 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch test",
+            "name": "Launch ItemDatabaseHandler",
             "request": "launch",
-            "mainClass": "test",
-            "projectName": "java_pp_20e16ca4"
+            "mainClass": "main.ItemDatabaseHandler",
+            "projectName": "BillingSystem_774e0603"
         },
         {
             "type": "java",
@@ -21,16 +21,34 @@
             "type": "java",
             "name": "Launch App",
             "request": "launch",
-            "vmArgs": "--module-path C:/src/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "vmArgs": "--module-path C:/src/JavaFX/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml",
             "mainClass": "App",
-            "projectName": "java_pp_20e16ca4"
+            "projectName": "BillingSystem_774e0603"
         },
         {
             "type": "java",
             "name": "Launch InvoiceGenerator",
             "request": "launch",
             "mainClass": "main.InvoiceGenerator",
-            "projectName": "java_pp_20e16ca4"
+            "projectName": "BillingSystem_774e0603"
+        },
+        {
+            "type": "java",
+            "name": "Launch App(1)",
+            "request": "launch",
+            "mainClass": "App"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main"
+        },
+        {
+            "type": "java",
+            "name": "Launch ABC",
+            "request": "launch",
+            "mainClass": "misc.ABC"
         }
     ]
 }
