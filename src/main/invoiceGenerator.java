@@ -23,9 +23,11 @@ public class InvoiceGenerator {
     private Customer cust;
     private boolean itemAdded;
     private Table itemTable;
+    
+    private String InvoiceNumber;
 
 
-    public InvoiceGenerator(String invoicePath,Company comp, Customer cust) {
+    public InvoiceGenerator(String invoicePath,Company comp, Customer cust, String InvoiceNumber) {
         try {
 
             this.comp = comp;
@@ -35,6 +37,8 @@ public class InvoiceGenerator {
             file = new PdfWriter(invoicePath);
             pdfDoc = new PdfDocument(file);
             invoice = new Document(pdfDoc);
+
+            this.InvoiceNumber = InvoiceNumber;
 
             pdfDoc.setDefaultPageSize(PageSize.A4);
         } catch (Exception e) {
@@ -49,16 +53,16 @@ public class InvoiceGenerator {
 
         Table header = new Table(colWidth);
 
-        String Name = "Replace By Company Name";
-        String Address = "\nline 1,\n Line 2\n City State Zip";
-        String Invoice = "GST In: " + "Replace" + "\nInvoice: " + "#Replace";
-        String Contact = "Phone no. : " + "Replace" + "\nEmail: " + "Replace";
+        String Name = comp.getCompanyName();
+        String Address = comp.getAddressLine1() + "\n" + comp.getAddressLine2() + "\n" + comp.getCity() + ", "+ comp.getState() + "-"+comp.getZip();
+        String Invoice = "GST In: " + comp.getGSTNumber() + "\nInvoice: #" +  this.InvoiceNumber ;
+        String Contact = "Phone no. : " + comp.getPhoneNumber() + "\nEmail: " + comp.getEmail();
         header.setBackgroundColor(new DeviceRgb(230, 230, 230));
         header.setBorder(Border.NO_BORDER);
 
         Cell nameCell = new Cell();
-        nameCell.add(new Paragraph(Name).setFontSize(30f).setTextAlignment(TextAlignment.CENTER));
-        nameCell.setMargin(30f);
+        nameCell.add(new Paragraph(Name).setFontSize(20f).setTextAlignment(TextAlignment.CENTER));
+        nameCell.setMargin(20f);
         nameCell.setMarginBottom(0f);
         nameCell.setPadding(12f);
         nameCell.setPaddingBottom(2f);
@@ -180,7 +184,7 @@ public class InvoiceGenerator {
     }
 
     public static void main(String[] args) {
-        InvoiceGenerator inv = new InvoiceGenerator("C:/users/varun/invoice.pdf", new Company(), new Customer());
+        InvoiceGenerator inv = new InvoiceGenerator("C:/users/varun/invoice.pdf", new Company(), new Customer(), new String("0001"));
         inv.setUpFile();
         inv.addItem(new Item());
         inv.printItemTable();
