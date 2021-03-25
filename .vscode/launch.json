@@ -6,17 +6,10 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch InvoiceGenerator",
+            "name": "Launch test",
             "request": "launch",
-            "mainClass": "main.InvoiceGenerator",
-            "projectName": "BillingSystem_774e0603"
-        },
-        {
-            "type": "java",
-            "name": "Launch invoiceGenerator",
-            "request": "launch",
-            "mainClass": "main.invoiceGenerator",
-            "projectName": "BillingSystem_774e0603"
+            "mainClass": "test",
+            "projectName": "java_pp_20e16ca4"
         },
         {
             "type": "java",
@@ -28,9 +21,16 @@
             "type": "java",
             "name": "Launch App",
             "request": "launch",
-            "vmArgs": "--module-path C:/src/JavaFX/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml",
+            "vmArgs": "--module-path C:/src/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml",
             "mainClass": "App",
-            "projectName": "BillingSystem_774e0603"
+            "projectName": "java_pp_20e16ca4"
+        },
+        {
+            "type": "java",
+            "name": "Launch InvoiceGenerator",
+            "request": "launch",
+            "mainClass": "main.InvoiceGenerator",
+            "projectName": "java_pp_20e16ca4"
         }
     ]
 }

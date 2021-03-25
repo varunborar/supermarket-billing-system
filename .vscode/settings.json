@@ -1,10 +1,5 @@
 {
-    "java.project.referencedLibraries": {
-        "include": [
-            "lib/**/*.jar"
-        ],
-        "exclude": [
-            "lib/jar_files/javafx/javafx-swt.jar"
-        ]
-    }
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ]
 }

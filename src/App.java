@@ -12,20 +12,19 @@ public class App extends Application {
 
     @Override
     public void start(Stage mainStage) throws Exception {
-        
-        try{
+
+        try {
 
             Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
             Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("App.css").toExternalForm());      //Applying Style Sheets
+            scene.getStylesheets().add(getClass().getResource("App.css").toExternalForm()); // Applying Style Sheets
             mainStage.setTitle("Billing System");
             mainStage.setScene(scene);
-            // mainStage.setMaximized(true);       //Opting for full screen mode 
-            mainStage.setResizable(false);      //Disabling resizing of window
+            // mainStage.setMaximized(true); //Opting for full screen mode
+            mainStage.setResizable(false); // Disabling resizing of window
             mainStage.show();
 
-        }catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
