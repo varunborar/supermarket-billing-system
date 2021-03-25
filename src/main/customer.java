@@ -8,63 +8,54 @@ public class Customer {
     private String CustomerContact;
     private String Paymod;
 
-    public Customer{
+    public Customer() {
 
-        this.CustomerName= "Default Customer";
-        this.CustomerId="Default Customer ID";
-        this.Customermail="Default e-mail";
-        this.CustomerContact="Default Contact";
-        this.Paymod="Default";
+        this.CustomerName = "Default Customer";
+        this.CustomerId = "Default Customer ID";
+        this.Customermail = "Default e-mail";
+        this.CustomerContact = "Default Contact";
+        this.Paymod = "Default";
     }
 
-    public void setName(String newName)
-    {
-        this.CustomerName= newName;
+    public void setName(String newName) {
+        this.CustomerName = newName;
     }
 
-    public void setID(String newId)
-    {
-        this.CustomerID= newID;
+    public void setID(String newId) {
+        this.CustomerId = newId;
     }
 
-    public void setmail(String newmail)
-    {
-        this.Customermail= newmail;
+    public void setmail(String newmail) {
+        this.Customermail = newmail;
 
     }
 
-    public void setContact(String newno)
-    {
-        this.CustomerContact= newno;
+    public void setContact(String newno) {
+        this.CustomerContact = newno;
     }
 
-    public void setpaymod(String newpaymod)
-    {
+    public void setpaymod(String newpaymod) {
         this.Paymod = newpaymod;
     }
 
-    public String getname()
-    {
+    public String getname() {
         return CustomerName;
     }
 
-    public String getID()
-    {
+    public String getID() {
         return CustomerId;
     }
-    public String getmail()
-    {
+
+    public String getmail() {
         return Customermail;
     }
 
-    public String getContact()
-    {
+    public String getContact() {
         return CustomerContact;
     }
 
-    public String getpaymod()
-    {
+    public String getpaymod() {
         return Paymod;
-    }    
+    }
 
 }
