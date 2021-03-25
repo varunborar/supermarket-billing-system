@@ -13,13 +13,6 @@
         },
         {
             "type": "java",
-            "name": "Launch invoiceGenerator",
-            "request": "launch",
-            "mainClass": "main.invoiceGenerator",
-            "projectName": "BillingSystem_774e0603"
-        },
-        {
-            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
