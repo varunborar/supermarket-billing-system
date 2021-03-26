@@ -1,6 +1,6 @@
 package main;
 
-import main.Item;
+
 
 public class InvoiceItem extends Item {
 

@@ -217,11 +217,19 @@ public class mainController {
     {
         initialize();
         subTotal();
+        dispDiscount.setText("");
+        dispTotal.setText("");
+        discountAmount.setText("");
+        itemQuantity.setText("");;
+        
     }
 
     public void clearAll()
     {
         invoice.clearAll();
+
+        invoiceTable.getItems().clear();
+        refresh();
     }
 
     public void subTotal()

@@ -10,9 +10,6 @@ import com.itextpdf.kernel.colors.DeviceRgb;
 import com.itextpdf.kernel.geom.PageSize;
 import com.itextpdf.layout.property.TextAlignment;
 
-import main.Company;
-import main.Customer;
-import main.Item;
 
 public class InvoiceGenerator {
 

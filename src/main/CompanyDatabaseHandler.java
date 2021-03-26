@@ -2,7 +2,7 @@ package main;
 
 import java.sql.*;
 
-import main.Company;
+
 
 public class CompanyDatabaseHandler {
 

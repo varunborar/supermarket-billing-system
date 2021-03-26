@@ -40,6 +40,7 @@ public class Invoice {
         subTotal = 0f;
         total = 0f;
         discount = 0f;
+        ItemCount = 0;
     }
 
     public float subTotal() {
