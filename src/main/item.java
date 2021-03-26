@@ -7,6 +7,7 @@ public class Item {
     private String ItemName;
     private String Price;
 
+
     public Item() {
         this.ItemCode = "Default Code";
         this.ItemName = "Default Name";
@@ -36,7 +37,6 @@ public class Item {
     public String getItemprice() {
         return Price;
     }
-
 }
 
 

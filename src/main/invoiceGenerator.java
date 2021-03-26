@@ -26,25 +26,16 @@ public class InvoiceGenerator {
     
     private String InvoiceNumber;
 
-    private static int count;
 
-    static{
-        count = 0;
-    }
-
-
-    public InvoiceGenerator(String invoicePath,Company comp, Customer cust, String InvoiceNumber) {
+    public InvoiceGenerator(String invoicePath) {
         try {
-
-            this.comp = comp;
-            this.cust = cust;
             this.itemAdded = false;
 
             file = new PdfWriter(invoicePath);
             pdfDoc = new PdfDocument(file);
             invoice = new Document(pdfDoc);
 
-            this.InvoiceNumber = InvoiceNumber;
+            
 
             pdfDoc.setDefaultPageSize(PageSize.A4);
         } catch (Exception e) {
@@ -52,7 +43,22 @@ public class InvoiceGenerator {
         }
     }
 
-    private void setUpFile() {
+    public void setInvoiceNumber(String InvoiceNumber)
+    {
+        this.InvoiceNumber = InvoiceNumber;
+    }
+
+    public void setCompany(Company comp)
+    {
+        this.comp = comp;
+    }
+
+    public void setCustomer(Customer cust)
+    {
+        this.cust = cust;
+    }
+
+    public void setUpFile() {
 
         // Creating Header
         float colWidth[] = { 340f, 220f};
@@ -136,7 +142,7 @@ public class InvoiceGenerator {
         invoice.add(customer);
     }
 
-    public void addItem(Item i, Integer quantity)
+    public void addItem(Item i, Integer quantity, int serialNumber)
     {
         if (!this.itemAdded)
         {
@@ -153,8 +159,7 @@ public class InvoiceGenerator {
         }
 
         //Add for adding item row after creatng item class.
-        count++;
-        itemTable.addCell(new Cell().add(new Paragraph(count + ".").setFontSize(10f).setTextAlignment(TextAlignment.RIGHT)));
+        itemTable.addCell(new Cell().add(new Paragraph(serialNumber + ".").setFontSize(10f).setTextAlignment(TextAlignment.RIGHT)));
         itemTable.addCell(new Cell().add(new Paragraph(i.getItemcode()).setFontSize(10f).setTextAlignment(TextAlignment.RIGHT)));
         itemTable.addCell(new Cell().add(new Paragraph(i.getItemname()).setFontSize(10f).setTextAlignment(TextAlignment.RIGHT)));
         itemTable.addCell(new Cell().add(new Paragraph(quantity + "").setFontSize(10f).setTextAlignment(TextAlignment.RIGHT)));
@@ -200,12 +205,14 @@ public class InvoiceGenerator {
 
         // TEST CODE CAN BE REMOVED 
 
-        InvoiceGenerator inv = new InvoiceGenerator("C:/users/varun/invoice.pdf", new Company(), new Customer(), new String("0001"));
-        inv.setUpFile();
-        inv.addItem(new Item(), 10);
-        inv.printItemTable();
-        inv.setFooter("replace","replace","replace");
+        // InvoiceGenerator inv = new InvoiceGenerator("C:/users/varun/invoice.pdf", new Company(), new Customer(), new String("0001"));
+        // inv.setUpFile();
+        // inv.addItem(new Item(), 10, 1);
+        // inv.printItemTable();
+        // inv.setFooter("replace","replace","replace");
 
         // TEST CODE ENDS
     }
 }
+
+

@@ -82,12 +82,13 @@
                         <Label layoutX="14.0" layoutY="55.0" prefHeight="25.0" prefWidth="47.0" text="Item" />
                         <TextField fx:id="itemQuantity" layoutX="103.0" layoutY="93.0" prefHeight="25.0" prefWidth="214.0" />
                         <Label layoutX="14.0" layoutY="93.0" prefHeight="25.0" prefWidth="53.0" text="Quantity" />
-                        <Button fx:id="itemAdd" layoutX="12.0" layoutY="143.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" text="Add" />
-                        <Button fx:id="itemClearAll" layoutX="180.0" layoutY="143.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" text="Clear All" />
-                        <Button fx:id="calculateSubtotal" layoutX="12.0" layoutY="181.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="304.0" text="Sub-Total" />
+                        <Button layoutX="12.0" layoutY="143.0" mnemonicParsing="false" onAction="#itemAdd" prefHeight="25.0" prefWidth="76.0" text="Add" />
+                        <Button layoutX="132.0" layoutY="143.0" mnemonicParsing="false" onAction="#clearAll" prefHeight="25.0" prefWidth="76.0" text="Clear All" />
+                        <Button layoutX="12.0" layoutY="181.0" mnemonicParsing="false" onAction="#subTotal" prefHeight="25.0" prefWidth="304.0" text="Sub-Total" />
                         <Label layoutX="14.0" layoutY="239.0" prefHeight="25.0" prefWidth="122.0" text="Discount Amount" />
                         <TextField fx:id="discountAmount" layoutX="167.0" layoutY="239.0" />
-                        <Button fx:id="calculateTotal" layoutX="15.0" layoutY="286.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="304.0" text="Total" />
+                        <Button layoutX="15.0" layoutY="286.0" mnemonicParsing="false" onAction="#total" prefHeight="25.0" prefWidth="304.0" text="Total" />
+                        <Button layoutX="249.0" layoutY="143.0" mnemonicParsing="false" onAction="#refresh" prefHeight="25.0" prefWidth="67.0" text="Refresh" />
                      </children>
                   </Pane>
                   <Pane layoutX="-7.0" layoutY="326.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="340.0">
@@ -100,9 +101,9 @@
                         <TextField fx:id="email" layoutX="126.0" layoutY="89.0" prefHeight="25.0" prefWidth="193.0" />
                         <Label layoutX="14.0" layoutY="125.0" prefHeight="25.0" prefWidth="99.0" text="Payment Mode" />
                         <ChoiceBox fx:id="paymentMode" layoutX="126.0" layoutY="125.0" prefHeight="25.0" prefWidth="193.0" />
-                        <Button fx:id="printBill" layoutX="14.0" layoutY="234.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="304.0" text="Print Bill" />
+                        <Button layoutX="14.0" layoutY="234.0" mnemonicParsing="false" onAction="#printBill" prefHeight="25.0" prefWidth="304.0" text="Print Bill" />
                         <Label layoutX="15.0" layoutY="158.0" prefHeight="25.0" prefWidth="99.0" text="Invoice No." />
-                        <TextField fx:id="email1" layoutX="127.0" layoutY="158.0" prefHeight="25.0" prefWidth="193.0" />
+                        <TextField fx:id="invoiceNumber" layoutX="127.0" layoutY="158.0" prefHeight="25.0" prefWidth="193.0" />
                      </children>
                   </Pane>
                </children>
@@ -110,13 +111,13 @@
             <Separator orientation="VERTICAL" prefHeight="200.0" />
             <Pane>
                <children>
-                  <TableView maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="530.0" prefWidth="720.0">
+                  <TableView fx:id="invoiceTable" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="530.0" prefWidth="720.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="S. No" />
-                      <TableColumn prefWidth="75.0" text="Item Code" />
-                        <TableColumn prefWidth="382.35691833496094" text="Item Name " />
-                        <TableColumn prefWidth="98.186279296875" text="Quantity" />
-                        <TableColumn prefWidth="88.48040771484375" text="Price" />
+                      <TableColumn fx:id="S_NO" prefWidth="75.0" text="S. No" />
+                      <TableColumn fx:id="ITEM_CODE" prefWidth="75.0" text="Item Code" />
+                        <TableColumn fx:id="ITEM_NAME" prefWidth="382.35691833496094" text="Item Name " />
+                        <TableColumn fx:id="QUANTITY" prefWidth="98.186279296875" text="Quantity" />
+                        <TableColumn fx:id="PRICE" prefWidth="88.48040771484375" text="Price" />
                     </columns>
                   </TableView>
                   <Label layoutX="531.0" layoutY="544.0" prefHeight="17.0" prefWidth="91.0" text="Sub-Total" />
