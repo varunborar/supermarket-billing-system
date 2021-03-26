@@ -19,15 +19,15 @@
       <Label layoutX="384.0" layoutY="221.0" prefHeight="25.0" prefWidth="35.0" text="ZIP" />
       <Button layoutX="402.0" layoutY="280.0" mnemonicParsing="false" onAction="#register" prefHeight="25.0" prefWidth="72.0" text="Register" />
       <Button layoutX="495.0" layoutY="280.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="72.0" text="Cancel" />
-      <TextField layoutX="118.0" layoutY="37.0" />
-      <TextField layoutX="118.0" layoutY="70.0" />
-      <TextField layoutX="420.0" layoutY="37.0" />
-      <TextField layoutX="420.0" layoutY="70.0" />
-      <TextField layoutX="118.0" layoutY="104.0" prefHeight="25.0" prefWidth="450.0" />
-      <TextField layoutX="118.0" layoutY="143.0" prefHeight="25.0" prefWidth="450.0" />
-      <TextField layoutX="118.0" layoutY="180.0" prefHeight="25.0" prefWidth="450.0" />
-      <TextField layoutX="55.0" layoutY="221.0" prefHeight="25.0" prefWidth="129.0" />
-      <TextField layoutX="239.0" layoutY="221.0" prefHeight="25.0" prefWidth="129.0" />
-      <TextField layoutX="420.0" layoutY="221.0" prefHeight="25.0" prefWidth="129.0" />
+      <TextField fx:id="companyName" layoutX="118.0" layoutY="37.0" />
+      <TextField fx:id="GSTIn" layoutX="118.0" layoutY="70.0" />
+      <TextField fx:id="authorizedSignatory" layoutX="420.0" layoutY="37.0" />
+      <TextField fx:id="phoneNumber" layoutX="420.0" layoutY="70.0" />
+      <TextField fx:id="email" layoutX="118.0" layoutY="104.0" prefHeight="25.0" prefWidth="450.0" />
+      <TextField fx:id="line1" layoutX="118.0" layoutY="143.0" prefHeight="25.0" prefWidth="450.0" />
+      <TextField fx:id="line2" layoutX="118.0" layoutY="180.0" prefHeight="25.0" prefWidth="450.0" />
+      <TextField fx:id="city" layoutX="55.0" layoutY="221.0" prefHeight="25.0" prefWidth="129.0" />
+      <TextField fx:id="state" layoutX="239.0" layoutY="221.0" prefHeight="25.0" prefWidth="129.0" />
+      <TextField fx:id="zip" layoutX="420.0" layoutY="221.0" prefHeight="25.0" prefWidth="129.0" />
    </children>
 </AnchorPane>

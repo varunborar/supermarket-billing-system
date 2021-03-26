@@ -3,7 +3,7 @@ package main;
 import java.sql.*;
 import java.util.Vector;
 
-class ItemDatabaseHandler {
+public class ItemDatabaseHandler {
 
     public ItemDatabaseHandler() {
         Connection conn = null;
@@ -133,9 +133,9 @@ class ItemDatabaseHandler {
 
         // TEST CODE CAN BE REMOVED
 
-        
-        ItemDatabaseHandler itemdb = new ItemDatabaseHandler();
-        itemdb.createTable();
+
+        // ItemDatabaseHandler itemdb = new ItemDatabaseHandler();
+        // itemdb.createTable();
 
         // Item item1 = new Item();
         // item1.setItemcode("10003");
@@ -157,10 +157,10 @@ class ItemDatabaseHandler {
         //     System.out.println("Item Name: " + i.getItemname() + "\tItem Code: " + i.getItemcode() + "\tItem Price: " + i.getItemprice());
         // }
 
-        Item i;
+        // Item i;
 
-        i = itemdb.getItemDB("Tea Masala");
-        System.out.println("Item Name: " + i.getItemname() + "\tItem Code: " + i.getItemcode() + "\tItem Price: " + i.getItemprice());
+        // i = itemdb.getItemDB("Tea Masala");
+        // System.out.println("Item Name: " + i.getItemname() + "\tItem Code: " + i.getItemcode() + "\tItem Price: " + i.getItemprice());
 
     }
 }

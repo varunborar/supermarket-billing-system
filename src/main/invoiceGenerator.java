@@ -196,10 +196,16 @@ public class InvoiceGenerator {
     }
 
     public static void main(String[] args) {
+
+
+        // TEST CODE CAN BE REMOVED 
+
         InvoiceGenerator inv = new InvoiceGenerator("C:/users/varun/invoice.pdf", new Company(), new Customer(), new String("0001"));
         inv.setUpFile();
         inv.addItem(new Item(), 10);
         inv.printItemTable();
         inv.setFooter("replace","replace","replace");
+
+        // TEST CODE ENDS
     }
 }
